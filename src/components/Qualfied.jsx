@@ -48,8 +48,8 @@ const Qualfied = () => {
                           Space is limited. Tap the button below to call and
                           claim.
                         </p>
-                        <a href="tel:(800) 940-0125" class="call_now">
-                          (800) 940-0125
+                        <a href="tel:+18885170494" class="call_now">
+                        CALL (888) 517-0494
                         </a>
                         <p>
                           This program has extremely limited capacity, so call

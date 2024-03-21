@@ -45,7 +45,7 @@ const MedicareMedicide = () => {
                     <div class="question-item">
                       <div class="question">
                         <h2>Are you on Medicare or Medicaid?</h2>
-                        <Link id="medicare_medicaid_yes" to="/not-qualified">
+                        <Link id="medicare_medicaid_yes" to="/congrats">
                           Yes
                         </Link>
                         <Link id="medicare_medicaid_no" to="/congrats">
