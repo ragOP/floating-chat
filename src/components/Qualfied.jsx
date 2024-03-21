@@ -6,6 +6,7 @@ import gas from "../images/gas.97e180f2b6116cde3af0.webp";
 import bill from "../images/bills.7de085eb2f1636525460.webp";
 import trust from "../images/trust-seal.b1e158b40defd530176f.png";
 import review from "../images/review-main.629ab640952de028b2f9.png";
+import Fomo from "./Fomo";
 
 const Qualfied = () => {
   useEffect(() => {
@@ -141,6 +142,7 @@ const Qualfied = () => {
               </div>
             </div>
           </div>
+          <Fomo />
           <div class="section1">
             <div class="container">
               <div class="row">

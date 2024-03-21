@@ -8,6 +8,7 @@ import bill from "../images/bills.7de085eb2f1636525460.webp";
 import trust from "../images/trust-seal.b1e158b40defd530176f.png";
 import review from "../images/review-main.629ab640952de028b2f9.png";
 import { Link } from "react-router-dom";
+import Fomo from "./Fomo";
 
 const Landing = () => {
   useEffect(() => {
@@ -153,6 +154,7 @@ const Landing = () => {
               </div>
             </div>
           </div>
+          <Fomo />
           <div class="section1">
             <div class="container">
               <div class="row">
