@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Landing from "./components/Landing";
+import Income from "./components/Income";
+import MedicareMedicide from "./components/MedicareMedicide";
+import NotQualified from "./components/NotQualified";
+import Qualfied from "./components/Qualfied";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        congrats
+        <Route path="/income" element={<Income />} />
+        <Route path="/medicare-medicaid" element={<MedicareMedicide />} />
+        <Route path="/not-qualified" element={<NotQualified />} />
+        <Route path="/congrats" element={<Qualfied />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
