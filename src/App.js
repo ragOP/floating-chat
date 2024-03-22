@@ -1,4 +1,5 @@
 import Landing from "./components/Landing";
+import Landing2 from "./components/Landing2";
 import Income from "./components/Income";
 import MedicareMedicide from "./components/MedicareMedicide";
 import NotQualified from "./components/NotQualified";
@@ -10,6 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/engaca4" element={<Landing2/>} />
         congrats
         <Route path="/income" element={<Income />} />
         <Route path="/medicare-medicaid" element={<MedicareMedicide />} />
