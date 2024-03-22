@@ -23,7 +23,7 @@ const Landing = () => {
         // For demonstration, using a random state name
 
 
-        setState(randomState);
+        setState(data);
       } catch (error) {
         console.error("Error fetching user's state:", error);
       }
@@ -108,7 +108,7 @@ const Landing = () => {
             <div class="container">
               <div class="row">
                 <div class="trusted-seal-headline">
-                  <h2>Trusted Partners, Secured Promise</h2>
+                  <h2>Trusted Partner, Secured Promise</h2>
                 </div>
                 <div class="trusted-seal-wrapper">
                   <img src={trust} alt="" />
