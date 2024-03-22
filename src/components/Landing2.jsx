@@ -69,7 +69,7 @@ const Landing = () => {
                     <div class="hero-section-wrapper">
                       <div class="hero-section-wrapper-content">
                         <h2>
-                        {stateName ? stateName : 'DL'} Residents: Act Now to Secure Your $6,329 Government
+                        {stateName ? stateName : ''} Residents: Act Now to Secure Your $6,329 Government
                           Assistance
                         </h2>
                         <p>
