@@ -11,6 +11,26 @@ import { Link } from "react-router-dom";
 import Fomo from "./Fomo";
 
 const Landing = () => {
+  const [state, setState] = useState("");
+  useEffect(() => {
+    // Function to get user's state
+    const getUserState = async () => {
+      try {
+        // Example API to get user's state based on IP address
+        const response = await fetch("https://api.ipify.org?format=json");
+        const data = await response.json();
+
+        // For demonstration, using a random state name
+
+
+        setState(randomState);
+      } catch (error) {
+        console.error("Error fetching user's state:", error);
+      }
+    };
+
+    getUserState();
+  }, []);
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -46,7 +66,7 @@ const Landing = () => {
                     <div class="hero-section-wrapper">
                       <div class="hero-section-wrapper-content">
                         <h2>
-                          Dilli Residents: Act Now to Secure Your $6,329 Government
+                          {state} Residents: Act Now to Secure Your $6,329 Government
                           Assistance
                         </h2>
                         <p>
