@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import arrow from "../images/arrow.90ea3564113530f4186ea62ef0e3dac3.svg";
 import holdingHand from "../images/hand-holding-card.41d23d2b7f8ee8c002ad.webp";
 import food from "../images/food.22a7a1104c48ec1431eb.webp";
@@ -11,26 +11,29 @@ import { Link } from "react-router-dom";
 import Fomo from "./Fomo";
 
 const Landing = () => {
-  const [state, setState] = useState("");
+  const [stateName, setStateName] = useState("");
+ 
   useEffect(() => {
-    // Function to get user's state
-    const getUserState = async () => {
+    const fetchUserState = async () => {
       try {
-        // Example API to get user's state based on IP address
-        const response = await fetch("https://api.ipify.org?format=json");
+        const response = await fetch('https://ipinfo.io/json');
+        if (!response.ok) {
+          throw new Error('Failed to fetch user state');
+        }
         const data = await response.json();
-
-        // For demonstration, using a random state name
-
-
-        setState(data);
+   console.log('data',data.region)
+        setStateName(data.region);
+     
       } catch (error) {
-        console.error("Error fetching user's state:", error);
+        console.error('Error fetching user state:', error);
+      
       }
     };
 
-    getUserState();
+    fetchUserState();
   }, []);
+
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -66,7 +69,7 @@ const Landing = () => {
                     <div class="hero-section-wrapper">
                       <div class="hero-section-wrapper-content">
                         <h2>
-                          {state} Residents: Act Now to Secure Your $6,329 Government
+                        {stateName ? stateName : 'DL'} Residents: Act Now to Secure Your $6,329 Government
                           Assistance
                         </h2>
                         <p>
