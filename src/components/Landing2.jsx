@@ -81,7 +81,7 @@ const Landing = () => {
                       </div>
                       <div class="cta">
                         <Link id="cta-click" to="/income">
-                          I Want My Credit
+                        I Want My $6400 Subsidy
                           <img src={arrow} alt="" />
                         </Link>
                         <span>
